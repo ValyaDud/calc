@@ -3,24 +3,25 @@ import java.util.Scanner;
 public class Main {
 
  public static void main (String[]args) {
-     System.out.println("Hello!");
      Scanner scanner = new Scanner(System.in);
+     System.out.println("Hello! It's a calc.");
      System.out.println("Input a number 1");
-     System.out.println("Input a number 2");
-
      int num1 = scanner.nextInt();
+     System.out.println("Input a number 2");
      int num2 = scanner.nextInt();
+     int sum = num1+num2;
+     int substract = num1-num2;
+     System.out.println("Enter 1 if you want to get the sum. \nEnter 2 if you want to get the difference ");
+     int a = scanner.nextInt();
 
-     int sum = (num1+num2);
-     int subtract = (num1-num2);
-     int multiplication= (num1*num2);
-     int division = (num1/num2);
-
-     System.out.printf("Your result sum:  %d \n",sum);
-     System.out.printf("Your result subtract:  %d \n",subtract);
-     System.out.printf("Your result multiplication:  %d \n",multiplication);
-     System.out.printf("Your result division:  %d \n",division);
+    if (a == 1) {
+        System.out.printf("Your result sum num1+num2: %d \n", sum);
+    }else {
+        System.out.printf("Your result substract num1-num2 : %d \n" , substract);
+    }
+    System.out.println("It's all. Thank you!");
      scanner.close();
+
 
  }
 
