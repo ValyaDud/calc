@@ -5,8 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello! It's a calc.");
-        boolean doCalc = true;
-        while (doCalc) {
+        while (true) {
             System.out.println("Input a number 1");
             int num1 = scanner.nextInt();
             System.out.println("Input a number 2");
@@ -38,10 +37,9 @@ public class Main {
             }
             System.out.println("\nDo you want to run the calculator again? Enter 1 to continue, 2 to finish.");
             int b = scanner.nextInt();
-            if ( b ==1) continue;
-            if ( b ==2) break;
+            if (b == 2) break;
         }
-            System.out.println("\nIt's all. Thank you!");
-            scanner.close();
+        System.out.println("\nIt's all. Thank you!");
+        scanner.close();
     }
 }
