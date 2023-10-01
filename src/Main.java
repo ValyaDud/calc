@@ -10,10 +10,6 @@ public class Main {
             int num1 = scanner.nextInt();
             System.out.println("Input a number 2");
             int num2 = scanner.nextInt();
-            int sum = num1 + num2;
-            int substract = num1 - num2;
-            int multipl = num1 * num2;
-            float division = (float) num1 / num2;
             System.out.println("Enter + if you want to get the sum. \n" +
                     "Enter - if you want to get the difference.\n" +
                     "Enter * if you want to get " + "multiplication.\n" +
@@ -21,16 +17,16 @@ public class Main {
             char a = scanner.next().charAt(0);
             switch (a) {
                 case '+':
-                    System.out.printf("+: %d", sum);
+                    sum(num1,num2);
                     break;
                 case '-':
-                    System.out.printf("-: %d", substract);
+                    substract(num1,num2);
                     break;
                 case '*':
-                    System.out.printf("*: %d", multipl);
+                    multipl(num1,num2);
                     break;
                 case '/':
-                    System.out.printf("/: %.2f", division);
+                    division(num1,num2);
                     break;
                 default:
                     System.out.println("Error");
@@ -41,5 +37,17 @@ public class Main {
         }
         System.out.println("\nIt's all. Thank you!");
         scanner.close();
+    }
+    static void sum (int a, int b) {
+        System.out.printf("+: %d", a+b);
+    }
+    static void substract (int a, int b){
+        System.out.printf("-: %d", a-b);
+    }
+    static void multipl (int a, int b){
+        System.out.printf("*: %d", a*b);
+    }
+    static void division (int a, int b){
+        System.out.printf("/: %.2f", (float) a/b);
     }
 }
